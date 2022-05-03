@@ -23,5 +23,20 @@ pipeline
         }
     
     
+    post {
+            success {
+                echo "Application successfully deploy in apace tomcat server."
+            }
+            failure {
+                echo "Deployment Failed."
+            }
+            always {
+        // Let's wipe out the workspace before we finish!
+                sh 'rm -rf /root/.jenkins/workspace/time-tracker-jenkins-pipeline /*'
+                echo "Workspace cleaned"
+            }
+    }
+    
+    
     
 }
