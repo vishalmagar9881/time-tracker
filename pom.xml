@@ -42,6 +42,15 @@
                         <source>${java.version}</source>
                         <target>${java.version}</target>
                     </configuration>
+                         
+                    <dependency> 
+                                
+                    <groupId>com.apple</groupId>     
+                    <artifactId>AppleJavaExtensions</artifactId>     
+                    <version>1.4</version>
+                             
+                   </dependency>
+                         
                 </plugin>
                 <plugin>
                     <groupId>org.codehaus.mojo</groupId>
